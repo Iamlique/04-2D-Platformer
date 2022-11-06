@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Entity/Enitity_Base.gd" type="Script" id=1]
+[ext_resource path="res://overlap/Hurtbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Entity_Healthbar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/healthbar_full.png" type="Texture" id=4]
+[ext_resource path="res://Assets/healthbar_border.png" type="Texture" id=5]
+[ext_resource path="res://Assets/healthbar_empty.png" type="Texture" id=6]
+
+[node name="Enitity_Base" type="KinematicBody2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource( 1 )
+knockback_modifier = 1.1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+
+[node name="Hurtbox" parent="." instance=ExtResource( 2 )]
+collision_layer = 4
+collision_mask = 2
+
+[node name="Entity_Healthbar" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_right = 1.0
+margin_bottom = 1.0
+rect_scale = Vector2( 1, 0.8 )
+value = 100.0
+texture_under = ExtResource( 6 )
+texture_over = ExtResource( 5 )
+texture_progress = ExtResource( 4 )
+
+[connection signal="died" from="." to="." method="_on_Enitity_Base_died"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+
+[editable path="Hurtbox"]

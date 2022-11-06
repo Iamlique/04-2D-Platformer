@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Electronic-Fantasy.mp3-9c7a7d7a5e23bcf76821b73f54374439.mp3str"
+
+[deps]
+
+source_file="res://Assets/Electronic-Fantasy.mp3"
+dest_files=[ "res://.import/Electronic-Fantasy.mp3-9c7a7d7a5e23bcf76821b73f54374439.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

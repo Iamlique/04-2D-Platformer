@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Heroic-Intrusion.mp3-5683f4861d483c37f6af87733c07c309.mp3str"
+
+[deps]
+
+source_file="res://Assets/Heroic-Intrusion.mp3"
+dest_files=[ "res://.import/Heroic-Intrusion.mp3-5683f4861d483c37f6af87733c07c309.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Entity/Enitity_Base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/tilemap.png" type="Texture" id=2]
+[ext_resource path="res://overlap/Hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy/Enemy_Base.gd" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 552, 253, 23, 23 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 575, 253, 23, 23 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 15.0
+
+[node name="Enemy_Base" instance=ExtResource( 1 )]
+collision_mask = 7
+script = ExtResource( 4 )
+hp_max = 30
+hp = 30
+speed = 5000
+knockback_modifier = 5.0
+looking_speed = 25
+looking_color = Color( 0.455, 0.753, 0.988, 0.25 )
+los_color = Color( 0.909804, 0.541176, 0.0705882, 0.501961 )
+knockback = 7000
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="CollisionPolygon2D" parent="." index="2"]
+polygon = PoolVector2Array( -12, -17, 14, -18, 15, 8, -10, 9, -11, -17 )
+
+[node name="Hitbox" parent="." index="3" instance=ExtResource( 3 )]
+collision_layer = 4
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 5 )
+
+[node name="Hurtbox" parent="." index="5"]
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+shape = SubResource( 4 )
+
+[node name="Entity_Healthbar" parent="." index="6"]
+margin_left = -17.0
+margin_top = -24.0
+margin_right = 15.0
+margin_bottom = -12.0
+
+[node name="Label" type="Label" parent="." index="7"]
+margin_left = -15.0
+margin_top = -30.0
+margin_right = 38.0
+margin_bottom = 1.0
+rect_scale = Vector2( 0.5, 0.5 )
+text = "Monster
+"
+
+[editable path="Hitbox"]
+[editable path="Hurtbox"]

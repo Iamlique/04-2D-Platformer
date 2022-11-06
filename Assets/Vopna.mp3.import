@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Vopna.mp3-37fa984be4ed7269865365ddba9d4d06.mp3str"
+
+[deps]
+
+source_file="res://Assets/Vopna.mp3"
+dest_files=[ "res://.import/Vopna.mp3-37fa984be4ed7269865365ddba9d4d06.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

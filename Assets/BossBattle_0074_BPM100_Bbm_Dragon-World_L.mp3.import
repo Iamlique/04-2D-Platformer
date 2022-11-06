@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BossBattle_0074_BPM100_Bbm_Dragon-World_L.mp3-d97cf3cadf89a8ce39a83546ed0cd0fc.mp3str"
+
+[deps]
+
+source_file="res://Assets/BossBattle_0074_BPM100_Bbm_Dragon-World_L.mp3"
+dest_files=[ "res://.import/BossBattle_0074_BPM100_Bbm_Dragon-World_L.mp3-d97cf3cadf89a8ce39a83546ed0cd0fc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
