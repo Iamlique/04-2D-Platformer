@@ -5,7 +5,7 @@ Context and date
 A cool 2D platformer 11/5/2022
 
 Description
-A revenge story, you have a lover kidnapped, so your goal is to find demon king and save her.
+An adventure story. You are a swords master that went into a secluded training... just to find out the demon lord took over the world. Find and kill the demon lord.
 
 ## Implementation
 Which features you included
