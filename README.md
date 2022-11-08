@@ -18,7 +18,7 @@ Stats
 ## References
 
 ## Future Development
-I want to fix player health bar, add more enemies, add more levels, and add story elements(text)
+I want to add more enemies/ mini bosses, add more levels/ more depth to levels, and add story elements(text)/plot. I want to add a score and lives system as well.
 
 ## Created by
 Malique Blythe
